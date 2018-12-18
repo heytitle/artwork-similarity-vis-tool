@@ -78,7 +78,8 @@ export default class HomePage extends React.PureComponent {
           <img src={s.image} className="sim-img"/>
           <div className="sim-details">
             <h3>{s.title}</h3>
-            from <b>{s.external_house}</b> on {s.auction_date} | ID: {s.id} | hammer price: {s.hammer_price}
+            from <b>{s.external_house}</b> on {s.auction_date}
+            <div>ID: {s.id} | hammer price: {s.hammer_price}</div>
           </div>
 
           <div className="sim-score">

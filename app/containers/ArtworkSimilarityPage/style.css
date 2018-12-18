@@ -79,6 +79,7 @@ button {
 .sim-details {
   float: left;
   margin-left: 5px;
+  max-width: 70%;
 }
 
 .sim-details h3 {
