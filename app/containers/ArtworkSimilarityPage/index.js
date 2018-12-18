@@ -116,7 +116,7 @@ export default class HomePage extends React.PureComponent {
         <h1>
           <FormattedMessage {...messages.header} /><br/>
         </h1>
-        Title Filter: <input type="text" placeholder="type something" onChange={this.handleChange}/>
+        Title Filter: <input type="text" placeholder="artwork's title" onChange={this.handleChange}/>
         <button onClick={this.handleClick} value="Update">Update</button>
       <hr/>
       <ul className="artwork-list">
