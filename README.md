@@ -1,13 +1,15 @@
 # Artwork Similarity Visualization Tool
 
+This visualization tool is developed for analyzing results from my [Artwork Similarity project]. It can be accessed online via [the repo's Github page].
+
 <center>
+<p>
+</p>
 <img src="https://i.imgur.com/N5H4LQx.png" style="width: 500px">
 </center>
 
-This visualization tool is developed for analyzing results from my [Artwork Similarity project]. It can be accessed online via [the repo's Github page].
 
-
-## Set up
+## Setup
 ```
 npm install .
 ```
