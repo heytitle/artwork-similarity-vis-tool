@@ -18,7 +18,7 @@ module.exports = options => ({
     {
       // Compile into js/build.js
       path: path.resolve(process.cwd(), 'build'),
-      publicPath: '/',
+      publicPath: '/artwork-similarity-vis-tool/',
     },
     options.output,
   ), // Merge with env dependent settings
