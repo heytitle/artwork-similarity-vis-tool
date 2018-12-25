@@ -11,7 +11,6 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import messages from './messages';
 import styles from './style.css';
 import _ from 'lodash';
 import * as qs from 'query-string';
@@ -32,9 +31,16 @@ export default class HomePage extends React.PureComponent {
   }
 
   handleChange(event){
-      let value = event.target.value;
-      console.log('something is typing ' + value);
-      this.setState({input: value});
+    if(this.timeoutObject){
+      clearTimeout(this.timeoutObject);
+    }
+    let value = event.target.value;
+    console.log('something is typing ' + value);
+    this.setState({input: value});
+    this.timeoutObject = setTimeout(() => {
+      console.log('Fire!!!!!11');
+      this.handleClick();
+    }, 1500)
   }
 
   handleClick(event){
@@ -78,8 +84,9 @@ export default class HomePage extends React.PureComponent {
           <img src={s.image} className="sim-img"/>
           <div className="sim-details">
             <h3>{s.title}</h3>
-            from <b>{s.external_house}</b> on {s.auction_date}
-            <div>ID: {s.id} | hammer price: {s.hammer_price}</div>
+            <div>by <b>{s.artist_name}</b></div>
+            <div><b>Medium:</b> {s.medium}</div>
+            <div><b>Dimensions:</b> {s.dimensions}</div>
           </div>
 
           <div className="sim-score">
@@ -92,16 +99,16 @@ export default class HomePage extends React.PureComponent {
 
     return <li key={i}>
       <div className="artwork">
-        <h2>{a.artwork.title}</h2>
         <img src={a.artwork.image} className="artwork-img"/>
         <div className="artwork-details">
-          <h3>{a.artwork.artist_name}</h3>
-          <b>Dimensions: {a.artwork.measurement_height} x {a.artwork.measurement_width}</b>
-          <div>ID: {a.artwork.id} | hammer price: {a.artwork.hammer_price}</div>
+          <h2>{a.artwork.title}</h2>
+          <h3>by {a.artwork.artist_name}</h3>
+          <div><b>Medium:</b> {a.artwork.medium}</div>
+          <div><b>Dimensions:</b> {a.artwork.dimensions}</div>
         </div>
       </div>
       <div className="sim-panel">
-        <span className="title">Similar lots</span>
+        <span className="title">Similar artworks</span>
         <ul className="sim-list">
           {simDoms}
         </ul>
@@ -114,11 +121,16 @@ export default class HomePage extends React.PureComponent {
   return (
     <div className="artwork-similarity-page">
         <h1>
-          <FormattedMessage {...messages.header} /><br/>
+          Artwork Similarity Visualization Tool
         </h1>
-        Title Filter: <input type="text" placeholder="artwork's title" onChange={this.handleChange}/>
-        <button onClick={this.handleClick} value="Update">Update</button>
-      <hr/>
+        <div className="form">
+          <input type="text" placeholder="artwork's title" onChange={this.handleChange}/>
+          <button onClick={this.handleClick} value="Update">Force Reload</button>
+          <div className="clear"></div>
+        </div>
+        <div className="datasource">
+          <b>Datasource:</b> {qs.parse(location.search).s}
+        </div>
       <ul className="artwork-list">
         {artworkDoms}
       </ul>
