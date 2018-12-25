@@ -38,9 +38,9 @@ const MOUNT_NODE = document.getElementById('app');
 const render = messages => {
   ReactDOM.render(
     <Provider store={store}>
-        <ConnectedRouter history={history}>
-          <ArtworkSimilarityPage/>
-        </ConnectedRouter>
+      <ConnectedRouter history={history}>
+        <ArtworkSimilarityPage />
+      </ConnectedRouter>
     </Provider>,
     MOUNT_NODE,
   );
