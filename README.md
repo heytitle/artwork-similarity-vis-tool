@@ -5,7 +5,7 @@ This visualization tool is developed for analyzing results from my [Artwork Simi
 <center>
 <p>
 </p>
-<img src="https://i.imgur.com/N5H4LQx.png" style="width: 500px">
+<img src="https://i.imgur.com/nPkT4MC.png" style="width: 500px">
 </center>
 
 
