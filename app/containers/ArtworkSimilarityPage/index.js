@@ -88,13 +88,13 @@ export default class HomePage extends React.PureComponent {
     }
 
     return datasource.mapping[
-      this.state.dataset + '--' + this.state.architecture
+      `${this.state.dataset}--${this.state.architecture}`
     ];
   }
 
   fetchData() {
     const src = this.buildSource();
-    console.log(`fetching ${  src}`);
+    console.log(`fetching ${src}`);
     fetch(src)
       .then(res => res.json())
       .then(
@@ -118,9 +118,9 @@ export default class HomePage extends React.PureComponent {
       artworks = data.filter(a =>
         a.artwork.title.match(new RegExp(efilter, 'i')),
       );
-    } else {
-      artworks = _.take(data, 10);
     }
+
+    artworks = _.take(data, 20);
 
     const artworkDoms = artworks.map((a, i) => {
       const simDoms = _.take(a.sims, 5).map((s, j) => (
@@ -139,7 +139,8 @@ export default class HomePage extends React.PureComponent {
             </div>
             <div
               className="manipulate"
-              title={'Manipulated by ' + s.manipulation_profile}>
+              title={`Manipulated by ${s.manipulation_profile}`}
+            >
               {s.manipulation_profile}
             </div>
           </div>
@@ -175,9 +176,17 @@ export default class HomePage extends React.PureComponent {
       );
     });
 
-    const datasetDOM = datasource.datasets.map(d => <option key={d.key} value={d.key}>{d.desc}</option>);
+    const datasetDOM = datasource.datasets.map(d => (
+      <option key={d.key} value={d.key}>
+        {d.desc}
+      </option>
+    ));
 
-    const architectureDOM = datasource.architectures.map(a => <option key={a.key} value={a.key}>{a.desc}</option>);
+    const architectureDOM = datasource.architectures.map(a => (
+      <option key={a.key} value={a.key}>
+        {a.desc}
+      </option>
+    ));
 
     return (
       <div className="artwork-similarity-page">
