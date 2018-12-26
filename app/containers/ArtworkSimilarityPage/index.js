@@ -118,9 +118,12 @@ export default class HomePage extends React.PureComponent {
       artworks = data.filter(a =>
         a.artwork.title.match(new RegExp(efilter, 'i')),
       );
+
+      artworks = _.take(artworks, 20);
+    } else {
+      artworks = _.take(data, 20);
     }
 
-    artworks = _.take(data, 20);
 
     const artworkDoms = artworks.map((a, i) => {
       const simDoms = _.take(a.sims, 5).map((s, j) => (
