@@ -124,7 +124,6 @@ export default class HomePage extends React.PureComponent {
       artworks = _.take(data, 20);
     }
 
-
     const artworkDoms = artworks.map((a, i) => {
       const simDoms = _.take(a.sims, 5).map((s, j) => (
         <li key={j}>
