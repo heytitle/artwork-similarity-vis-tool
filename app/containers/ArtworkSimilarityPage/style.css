@@ -21,7 +21,18 @@
   font-size: 20px;
 }
 
+.form .dropdown {
+  margin-left: 20px;
+}
+
+.form select {
+  border: 1px solid;
+  margin-left: 10px;
+  padding: 5px;
+}
+
 .form input[type="text"] {
+  margin-top: 10px;
   padding: 10px;
   border: 1px solid #555;
   width: 100%;
@@ -120,6 +131,15 @@
   text-overflow: ellipsis;
   word-wrap: break-word;
   max-height: 140px;
+}
+
+.sim-details .manipulate {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: red;
+  padding: 0 5px;
+  font-size: 12px;
 }
 
 .sim-score {
