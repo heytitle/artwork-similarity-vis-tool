@@ -192,7 +192,18 @@ export default class HomePage extends React.PureComponent {
 
     return (
       <div className="artwork-similarity-page">
-        <h1>Visually Similar Image Search Analysis Tool</h1>
+        <div className="header">
+          <h1>Visually Similar Image Search Analysis Tool</h1>
+          <div className="menus">
+            <a className="project-description" target="_blank" href="http://pat.chormai.org/visually-similar-image-search-analysis-tool">
+            Github
+            </a>
+            <a className="project-description" target="_blank" href="https://github.com/heytitle/visually-similar-image-search">
+            Project Details
+            </a>
+          </div>
+
+        </div>
         <div className="form">
           {!qs.parse(location.search).s && (
             <div>

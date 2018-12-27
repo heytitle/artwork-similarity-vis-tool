@@ -1,11 +1,11 @@
 # Visually Similar Image Search Analysis Tool
 
-This webpage is developed for providing an interface to explore results from [Artwork Similarity project]. It can be accessed online via [the repo's Github page].
+This webpage is developed for providing an interface to explore results from my [Visually Similar Image Search][project] project. It can be accessed online via [the repo's Github page].
 
 <center>
 <p>
 </p>
-<img src="https://i.imgur.com/nPkT4MC.png" style="width: 500px">
+<img src="https://i.imgur.com/wRtoCoR.png" style="width: 500px">
 </center>
 
 
@@ -23,5 +23,5 @@ This project is licensed under the MIT license, Copyright (c) 2018 Maximilian
 Stoiber. For more information see `LICENSE.md`.
 
 
-[Artwork Similarity project]: https://github.com/heytitle/visually-similar-image-search
+[project]: https://github.com/heytitle/visually-similar-image-search
 [the repo's Github page]: http://pat.chormai.org/visually-similar-image-search-analysis-tool 
