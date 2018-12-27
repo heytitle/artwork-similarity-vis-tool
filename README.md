@@ -1,6 +1,6 @@
-# Artwork Similarity Visualization Tool
+# Visually Similar Image Search Analysis Tool
 
-This visualization tool is developed for analyzing results from my [Artwork Similarity project]. It can be accessed online via [the repo's Github page].
+This webpage is developed for providing an interface to explore results from [Artwork Similarity project]. It can be accessed online via [the repo's Github page].
 
 <center>
 <p>
@@ -23,5 +23,5 @@ This project is licensed under the MIT license, Copyright (c) 2018 Maximilian
 Stoiber. For more information see `LICENSE.md`.
 
 
-[Artwork Similarity project]: http://xxx
-[the repo's Github page]: http://pat.chormai.org/artwork-similarity-vis-tool/?s=https://s3.amazonaws.com/pchormai-public/artwork-similarity/nn-from-vgg16-moma-artworks--2018-12-25-14-40-03.npy.json
+[Artwork Similarity project]: https://github.com/heytitle/visually-similar-image-search
+[the repo's Github page]: http://pat.chormai.org/visually-similar-image-search-analysis-tool 
