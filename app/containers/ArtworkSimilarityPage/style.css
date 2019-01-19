@@ -38,17 +38,19 @@ h1 {
 
   display: block;
   margin-left: 5px;
-  padding: 0 10px;
+  /* border: 1px solid black; */
   display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  float: right;
   background: black;
   color: white;
-  text-align: center;
-  font-size: 14px;
-  line-height: 30px;
-  font-weight: normal;
-  float: right;
+  padding: 0px 10px;
   text-decoration: none;
-  /* margin-bottom: 10px; */
+}
+
+.project-description:hover {
+  background: #333;
 }
 
 .form {
@@ -78,7 +80,11 @@ h1 {
   border: 2px solid;
   padding: 5px 10px;
   cursor: pointer;
-  /* background: red; */
+}
+
+.form button:hover {
+  background: black;
+  color: white;
 }
 
 .artwork-list {

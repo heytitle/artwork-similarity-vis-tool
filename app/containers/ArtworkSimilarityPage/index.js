@@ -15,6 +15,8 @@ import _ from 'lodash';
 import * as qs from 'query-string';
 import styles from './style.css';
 import { datasource } from './datasource';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub as faGithub } from "@fortawesome/free-brands-svg-icons";
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
@@ -24,7 +26,7 @@ export default class HomePage extends React.PureComponent {
       data: [],
       input: '',
       filter: '',
-      dataset: 'moma-artworks-1000',
+      dataset: 'moma-artworks',
       architecture: 'vgg16',
       src: qs.parse(location.search).s,
     };
@@ -193,13 +195,13 @@ export default class HomePage extends React.PureComponent {
     return (
       <div className="artwork-similarity-page">
         <div className="header">
-          <h1>Visually Similar Image Search Analysis Tool</h1>
+          <h1>Visually Similar Image Search</h1>
           <div className="menus">
-            <a className="project-description" target="_blank" href="https://github.com/heytitle/visually-similar-image-search-analysis-tool">
-            Github
-            </a>
             <a className="project-description" target="_blank" href="https://github.com/heytitle/visually-similar-image-search">
-            Project Details
+              <FontAwesomeIcon icon={faGithub} size="lg" />
+            </a>
+            <a className="project-description" target="_blank" href="https://github.com/heytitle/visually-similar-image-search#motivation">
+              Project Details
             </a>
           </div>
 
@@ -240,7 +242,12 @@ export default class HomePage extends React.PureComponent {
           <div className="clear" />
         </div>
         <div className="datasource">
-          <b>Datasource:</b> {this.buildSource()}
+          <b>
+            { 
+              data.length > 0 ? 'Loaded ' : 'Loading '
+            }
+             data from&nbsp;
+          </b>{ this.buildSource()}
         </div>
         <ul className="artwork-list">{artworkDoms}</ul>
       </div>
