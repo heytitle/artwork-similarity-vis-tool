@@ -13,10 +13,10 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import _ from 'lodash';
 import * as qs from 'query-string';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import styles from './style.css';
 import { datasource } from './datasource';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub as faGithub } from "@fortawesome/free-brands-svg-icons";
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
@@ -197,14 +197,21 @@ export default class HomePage extends React.PureComponent {
         <div className="header">
           <h1>Visually Similar Image Search</h1>
           <div className="menus">
-            <a className="project-description" target="_blank" href="https://github.com/heytitle/visually-similar-image-search">
+            <a
+              className="project-description"
+              target="_blank"
+              href="https://github.com/heytitle/visually-similar-image-search"
+            >
               <FontAwesomeIcon icon={faGithub} size="lg" />
             </a>
-            <a className="project-description" target="_blank" href="https://github.com/heytitle/visually-similar-image-search#motivation">
+            <a
+              className="project-description"
+              target="_blank"
+              href="https://github.com/heytitle/visually-similar-image-search#motivation"
+            >
               Project Details
             </a>
           </div>
-
         </div>
         <div className="form">
           {!qs.parse(location.search).s && (
@@ -243,11 +250,10 @@ export default class HomePage extends React.PureComponent {
         </div>
         <div className="datasource">
           <b>
-            { 
-              data.length > 0 ? 'Loaded ' : 'Loading '
-            }
-             data from&nbsp;
-          </b>{ this.buildSource()}
+            {data.length > 0 ? 'Loaded ' : 'Loading '}
+            data from&nbsp;
+          </b>
+          {this.buildSource()}
         </div>
         <ul className="artwork-list">{artworkDoms}</ul>
       </div>
