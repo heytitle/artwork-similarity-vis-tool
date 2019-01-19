@@ -24,4 +24,4 @@ Stoiber. For more information see `LICENSE.md`.
 
 
 [project]: https://github.com/heytitle/visually-similar-image-search
-[the repo's Github page]: http://pat.chormai.org/visually-similar-image-search-analysis-tool 
+[the repo's Github page]: http://pat.chormai.org/visually-similar-image-search
